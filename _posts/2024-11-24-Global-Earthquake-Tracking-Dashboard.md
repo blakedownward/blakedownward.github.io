@@ -13,4 +13,4 @@ Let's have a look!
 
 ---
 
-<iframe seamless frameborder="0" src="https://public.tableau.com/views/World_Earthquakes/EarthquakeTracker?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link&:embed=yes&:showVizHome=no" width = '1090' height = '900'></iframe>
+<iframe seamless frameborder="0" src="https://public.tableau.com/views/World_Earthquakes/EarthquakeTracker?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link&:embed=yes&:showVizHome=no" width = '1090' height = '650'></iframe>
