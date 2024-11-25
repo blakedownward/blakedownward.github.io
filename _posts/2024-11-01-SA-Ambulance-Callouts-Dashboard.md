@@ -2,7 +2,7 @@
 layout: post
 title: SA Ambulance Service Callouts Tracking Dashboard
 image: "/posts/saas-callouts-power-bi-dashboard.png"
-tags: [Dashboard, Power BI, Data Viz]
+tags: [Dashboard, Power BI, Data Viz, Data Mining]
 ---
 
 Power BI dashboard aggregating 79,000+ pager messages to the South Australian Ambulance Service (SAAS) over three months 
