@@ -2,7 +2,7 @@
 layout: post
 title: Global Earthquake Tracking Dashboard
 image: "/posts/global-earthquake-tableau-dashboard.png"
-tags: [Dashboard, Tableau]
+tags: [Dashboard, Tableau, Data Viz]
 ---
 
 This post highlights a Tableau Dashboard I've created for tracking and analysing global earthquake activity. 
