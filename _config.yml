@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Blake Downward
-description: "Hi there I'm Blake, a Data Scientist from Adelaide, Australia.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
+description: "Welcome! I’m Blake, a Data Scientist based in Adelaide, Australia. I specialise in extracting insights and solutions from data to deliver real-world value. You'll find my work spans a range of disciplines, from digital signal processing and deep learning, to advanced data visualisations and analyses. Feel free to check out my work below and connect with me via GitHub or LinkedIn to get in touch."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
