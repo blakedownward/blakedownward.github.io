@@ -7,7 +7,7 @@ tags: [Flask, Clustering, Transformer, NLP, Power BI]
 
 PALETTEYES is a smart AI Colour Palette Tool for extracting colours from images, and generating colour palettes from natural language prompts. 
 
-View and use the tool at [PALETTEYES.com](https://paletteyes.com "Inspiration Through Colour, One Palette a Time")
+> :bulb: **Tip:** View and use the tool at [PALETTEYES.com](https://paletteyes.com "Inspiration Through Colour, One Palette a Time")
 
 ---
 
@@ -23,7 +23,7 @@ Simply:
 - Mix-and-Match colours from the *complementary* palettes (optional)
 - Copy and save your palette to use in your designs
 
-<img src="..\img\posts\paletteyes-extract-palette-from-image.png" width="600">
+<img src="{{site.url}}\img\posts\paletteyes-extract-palette-from-image.png" width="600" style="text-align:center;">
 
 #### How Does It Work?
 
@@ -72,4 +72,4 @@ Simply:
 - Mix-and-Match colours from the *complementary* palettes (optional)
 - Copy and save your palette to use in your designs
 
-<img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600">
+<img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600" style="text-align:center;">
