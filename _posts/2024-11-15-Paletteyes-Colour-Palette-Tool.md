@@ -72,4 +72,4 @@ Simply:
 - Mix-and-Match colours from the *complementary* palettes (optional)
 - Copy and save your palette to use in your designs
 
-<img src="..\img\posts\paletteyes-generate-palette-from-prompt.png" width="600">
+<img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600">
