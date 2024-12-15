@@ -14,10 +14,10 @@ PALETTEYES is a smart AI Colour Palette Tool for extracting colours from images,
 ### Extract Palette From Image
 
 #### Overview
-The Paletteyes' colour extractor offers a quick and simple method for capturing colours from inspiring images.
 
 <img src="{{site.url}}\img\posts\paletteyes-extract-palette-from-image.png" width="600" style="float:right;">
 
+The Paletteyes' colour extractor offers a quick and simple method for capturing colours from inspiring images.
 
 Simply:
 - Select your photo or image
@@ -65,9 +65,10 @@ to inconsistent and perhaps even unexpected results when running the function on
 ### Generate Palette From Prompt
 
 #### Overview
-The Paletteyes' colour palette generator offers a fun and novel way to create palettes from natural language prompts.
 
 <img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600" style="float:right;">
+
+The Paletteyes' colour palette generator offers a fun and novel way to create palettes from natural language prompts.
 
 Simply:
 - Input a prompt
