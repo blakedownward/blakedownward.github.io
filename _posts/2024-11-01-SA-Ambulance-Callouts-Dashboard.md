@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SA Ambulance Service Callouts Tracking Dashboard
+title: SA Ambulance Service Callouts Dashboard
 image: "/posts/saas-callouts-power-bi-dashboard.png"
 tags: [Dashboard, Power BI, Data Viz, Data Mining]
 ---
