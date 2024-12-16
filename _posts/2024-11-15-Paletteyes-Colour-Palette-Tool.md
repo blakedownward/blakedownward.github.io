@@ -38,7 +38,9 @@ unseen data makes it a great choice to get up and running quickly, but it does c
 
 *Issue #1:* Pre-defined value for **K**  
 Paletteyes has been restricted to output palettes with just five colours. This restriction provides users with 
-consistent number of outputs and minimises the computational load - but it does come at a cost.
+consistent number of outputs and minimises the computational load - but it does come at a cost. Setting "k=5" is 
+unlikely to be the optimal solution for the infinite variety of images it may come across, but this is a simplifying 
+assumption that balances returning a reasonable number of colours, in a reasonable amount of time.
 
 
 *Issue #2:* Black and White dominance  
@@ -59,7 +61,8 @@ by measuring the Euclidean distance between each centroid and all unique colours
 
 *Issue #4:* Variations in Results  
 Another feature of the **K-means clustering** algorithm is that it initialises with randomly placed centroids. This can lead 
-to inconsistent and perhaps even unexpected results when running the function on the same image multiple times. 
+to inconsistent and perhaps even unexpected results when running the function on the same image multiple times. Setting a "fixed" 
+*random seed* was considered, however it was decided against due to this being more of an "artistic" than "scientific" tool. 
 
 
 ### Generate Palette From Prompt
@@ -76,4 +79,28 @@ Simply:
 - Wait a moment for Paletteyes to "think" about your request
 - Mix-and-Match colours from the *complementary* palettes (optional)
 - Copy and save your palette to use in your designs
+
+
+#### How Does It Work?
+
+Generating a palette of colours from a natural language prompt can be broken-down to two main processes:  
+1) Representing the semantic meaning of the prompt with a vector of embeddings.
+2) Generating a combination of colours that best "fit" the embeddings.
+
+The first part of this process is handled by a pre-trained sentence transformer ('all-MiniLM-L6-v2') which takes an input of any length 
+and returns a vector of 384 embeddings to represent the semantic context of the input. 
+
+The second part of this process leverages a supervised machine learning network known as a "Multi-Headed Transformer", 
+which can be trained to reduce a vector of 384 embeddings down to just 15 (3 "RGB" values for each of the 5 output colours).
+This training process relies on having a dataset of appropriately labelled palettes so the model can learn the underlying 
+connections between an embedding and a collection of colours.
+
+#### Alternative approaches
+
+A Transformer is not the only way we can achieve the second part of this process. Simple implementations of a Multi-Layered 
+Perceptron (MLP) or a 1D Convolutional Neural Network (CNN) could be explored for reducing model size and inference time. 
+Alternatively, more sophisticated (and complicated) approaches like a Variational Auto-Encoder (VAE) or a Generative Adversarial Network (GAN) 
+might be able to learn more complex semantic mappings when compared to MLPs or CNNs. At the end of the day, selecting a 
+Transformer for this task strikes a balance between "ease of implementation" and "quality of output" - making it a great 
+choice for a baseline model and setting initial benchmark results.
 
