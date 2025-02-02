@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chimely - Productivity Timer with a Twist
-image: "/posts/paletteyes-home-page-image.png"
+image: "/posts/chimely-demo-screenshot.png"
 tags: [Python, Taipy, Productivity, Web App, Open Source]
 ---
 
