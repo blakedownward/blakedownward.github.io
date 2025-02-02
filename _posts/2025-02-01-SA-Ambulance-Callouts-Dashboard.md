@@ -5,8 +5,8 @@ image: "/posts/saas-callouts-power-bi-dashboard.png"
 tags: [Dashboard, Power BI, Data Viz, Data Mining]
 ---
 
-Power BI dashboard aggregating 79,000+ pager messages to the South Australian Ambulance Service (SAAS) over three months 
-from August 1st to October 30th, 2024. This dashboard models geographic and population data with the pager messages to 
+Power BI dashboard aggregating 161,000+ pager messages to the South Australian Ambulance Service (SAAS) over five months 
+from August 1st, 2024 to January 31st, 2025. This dashboard models geographic and population data with the pager messages to 
 provide a comprehensive state-wide overview for the end-user.
 
 ---
