@@ -71,7 +71,7 @@ to inconsistent and perhaps even unexpected results when running the function on
 
 <img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600" style="float:right;">
 
-The Paletteyes' colour palette generator offers a fun and novel way to create palettes from natural language prompts.
+The Paletteyes Colour Palette Generator offers a fun and novel way to create palettes from natural language prompts.
 
 Simply:
 - Input a prompt
