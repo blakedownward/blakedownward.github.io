@@ -56,10 +56,10 @@ As a result, Paletteyes can generate high-quality palettes even from unconventio
 
 ---
 
+#### **Technical Implementation Highlights**
+
 <img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600" style="float:right;">
 
-
-#### **Technical Implementation Highlights**
 
 - **Machine Learning Techniques**: K-means clustering, transformer-based text-to-palette generation.
 - **Custom Engineering**: Perceptual loss function design for improved model performance.
