@@ -54,9 +54,10 @@ To improve this, I developed a novel loss function incorporating a weighted suit
 
 As a result, Paletteyes can generate high-quality palettes even from unconventional prompts, positioning it as a valuable tool for designers and AI-driven creativity.
 
+---
+
 <img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600" style="float:right;">
 
----
 
 #### **Technical Implementation Highlights**
 
