@@ -1,106 +1,85 @@
 ---
 layout: post
-title: PALETTEYES - AI Colour Palette Tool
+title: PALETTEYES - AI-Powered Colour Palette Generation
 image: "/posts/paletteyes-home-page-image.png"
-tags: [Flask, Clustering, Transformer, NLP, Power BI]
+tags: [Flask, Clustering, Transformer, NLP, Power BI, PyTorch]
 ---
 
-PALETTEYES is a smart AI Colour Palette Tool for extracting colours from images, and generating colour palettes from natural language prompts. 
+Paletteyes is an API and web app designed to generate and extract colour palettes from images and natural language prompts. It provides designers, developers, and branding professionals with an intelligent, data-driven way to create visually harmonious colour schemes.
 
-> **Tip:** View and use the tool at [PALETTEYES.com](https://paletteyes.com "Inspiration Through Colour, One Palette a Time")
+> **Tip:** Try for yourself at [PALETTEYES.com](https://paletteyes.com "Inspiration Through Colour, One Palette a Time")
 
 ---
 
-### Extract Palette From Image
-
-#### Overview
+#### **Overview**
 
 <img src="{{site.url}}\img\posts\paletteyes-extract-palette-from-image.png" width="600" style="float:right;">
 
-The Paletteyes' colour extractor offers a quick and simple method for capturing colours from inspiring images.
+The project integrates machine learning and advanced clustering techniques to offer two core functionalities:
 
-Simply:
-- Select your photo or image
-- Click "Upload"
-- Review the extracted palette
-- Mix-and-Match colours from the *complementary* palettes (optional)
-- Copy and save your palette to use in your designs
+1. **Extract Palette from Image** - Uses k-means clustering to identify dominant colours in an image, with optimisations to enhance realism and usability.
+2. **Generate Palette from Prompt** - A transformer-based model trained on labeled colour palettes to generate perceptually balanced color schemes from text descriptions.
 
+Beyond these, Paletteyes enables users to refine their palettes with a colour picker tool and receive automatically suggested harmonious palettes based on their selections.
 
-#### How Does It Work?
+---
 
-Under the hood, Paletteyes' colour extraction feature utilises a modified ***K-means clustering*** algorithm 
-to discover distinct groups of dominant colours in an image. 
+#### **Business Impact**
 
-The ***K-means*** algorithm is an unsupervised machine learning technique which can be leveraged 
-for clustering similar data points on an ad-hoc basis. The flexibility of this algorithm to deal with 
-unseen data makes it a great choice to get up and running quickly, but it does come with its drawbacks.
+**1. Enhancing Design Efficiency for Developers & Creatives**\
+Choosing the right colour scheme is a major pain point in web and graphic design. Paletteyes streamlines this process by generating colour schemes that are:
 
-*Issue #1:* Pre-defined value for **K**  
-Paletteyes has been restricted to output palettes with just five colours. This restriction provides users with 
-consistent number of outputs and minimises the computational load - but it does come at a cost. Setting "k=5" is 
-unlikely to be the optimal solution for the infinite variety of images it may come across, but this is a simplifying 
-assumption that balances returning a reasonable number of colours, in a reasonable amount of time.
+- Data-driven yet intuitive, reducing time spent on trial-and-error.
+- Inspired by real-world environments (via image extraction), helping businesses create designs that align with their physical brand presence.
 
+For example, as a freelance web developer, I extracted a colour scheme from a photo of a client’s workspace, ensuring their website design perfectly matched their brand identity. This eliminated what can be a lengthy process of back and forth between designer and client over colour choices, and significantly sped up the design process.
 
-*Issue #2:* Black and White dominance  
-Many colourful images will actually be dominated by blacks and whites. Although these are critical "colours" 
-in any designer's toolkit, allowing blacks and whites to form the outputted palette could effectively reduce the 
-number of extracted colours to just three. 
+**2. Improved Usability with Smart Colour Extraction**\
+Standard k-means clustering can produce misleading results by selecting colours that don’t actually appear in an image. I implemented several optimizations to improve accuracy and usability:
 
+- **Nearest Observed Colour Matching**: Ensures extracted colours exist in the original image (as would be expected by the user).
+- **Exclusion of Non-Impactful Colours**: Automatically removes blacks and whites,  preventing dominant but non-useful colours being included in the palette.
+- **Optimized Data Sampling**: Uses only unique colours for clustering, making the process more likely to return perceptually obvious, but less-dominant colours.
 
-*Issue #3:* Unobserved Centroids  
-One aspect of **K-means clustering** which could lead to a poor user experience is the fact that cluster centroids 
-are at points which have been calculated to minimise the overall error. In other words, centroids are calculated based 
-on the sample of observations, but they may not actually be found in the sample. This could lead to serious confusion 
-when dealing with colour extraction because it may output colours that are bot found within the target image.
+These enhancements result in more relevant colour palettes that align with user expectations, helping to increase adoption and usability.
 
-This issue is overcome by searching for each centroid's nearest observed colour in the image. This is done in practice 
-by measuring the Euclidean distance between each centroid and all unique colours found in the image.
+**3. Loss Engineering for Creative/Subjective Applications**\
+One of the most technically challenging (and rewarding) aspects of Paletteyes was defining a loss function for the "Palette from Prompt" model. Initially, a blend of Mean Squared Error (MSE) and Cosine Similarity was used, but it struggled to generate perceptually coherent palettes for unseen prompts. Being a subjective/perceptual task, perceptual metrics would be key for the model to learn what makes a palette "look" good.
 
+To improve this, I developed a novel loss function incorporating a weighted suite of perceptual metrics such as; contrast, harmony, and brightness. This:
 
-*Issue #4:* Variations in Results  
-Another feature of the **K-means clustering** algorithm is that it initialises with randomly placed centroids. This can lead 
-to inconsistent and perhaps even unexpected results when running the function on the same image multiple times. Setting a "fixed" 
-*random seed* was considered, however it was decided against due to this being more of an "artistic" than "scientific" tool. 
+- Reduced training time and improved convergence.
+- Enhanced palette quality for novel prompts, ensuring even abstract inputs result in aesthetically pleasing palettes.
+- Allowed the model to understand and balance key design principles automatically.
 
-
-### Generate Palette From Prompt
-
-#### Overview
+As a result, Paletteyes can generate high-quality palettes even from unconventional prompts, positioning it as a valuable tool for designers and AI-driven creativity.
 
 <img src="{{site.url}}\img\posts\paletteyes-generate-palette-from-prompt.png" width="600" style="float:right;">
 
-The Paletteyes Colour Palette Generator offers a fun and novel way to create palettes from natural language prompts.
+---
 
-Simply:
-- Input a prompt
-- Click "Generate"
-- Wait a moment for Paletteyes to "think" about your request
-- Mix-and-Match colours from the *complementary* palettes (optional)
-- Copy and save your palette to use in your designs
+#### **Technical Implementation Highlights**
+
+- **Machine Learning Techniques**: K-means clustering, transformer-based text-to-palette generation.
+- **Custom Engineering**: Perceptual loss function design for improved model performance.
+- **Scalability & Deployment**: Serverless deployment on GCP Cloud Run.
+- **Extensibility**: Published an open-source Python package (pyletteyes) to support colour-related computations across projects. This is a lightweight package for working with colours and palettes as objects, offering simplified methods for type/string conversions (RGB-HSL-Hex-rgbString), colour conversions (darken, complementary, analogous), and palette scoring metrics (contrast, harmony, brightness balance).
+
+---
+
+#### **Future Potential & Applications**
+
+Paletteyes is more than just a tool - it represents a shift towards AI-assisted design workflows. Future expansions could include:
+
+- API integrations with design tools like Canva, Figma or Adobe XD.
+- Expanded dataset training for even more nuanced palette generation.
+- Real-time user feedback to refine results based on design preferences.
+
+Blending AI with human creativity, Paletteyes helps designers to work faster, make informed colour decisions, and create visually compelling projects with ease.
 
 
-#### How Does It Work?
 
-Generating a palette of colours from a natural language prompt can be broken-down to two main processes:  
-1) Representing the semantic meaning of the prompt with a vector of embeddings.
-2) Generating a combination of colours that best "fit" the embeddings.
 
-The first part of this process is handled by a pre-trained sentence transformer ('all-MiniLM-L6-v2') which takes an input of any length 
-and returns a vector of 384 embeddings to represent the semantic context of the input. 
 
-The second part of this process leverages a supervised machine learning network known as a "Multi-Headed Transformer", 
-which can be trained to reduce a vector of 384 embeddings down to just 15 (3 "RGB" values for each of the 5 output colours).
-This training process relies on having a dataset of appropriately labelled palettes so the model can learn the underlying 
-connections between an embedding and a collection of colours.
 
-#### Alternative approaches
-
-A Transformer is not the only way we can achieve the second part of this process. Simple implementations of a Multi-Layered 
-Perceptron (MLP) or a 1D Convolutional Neural Network (CNN) could be explored for reducing model size and inference time. 
-Alternatively, more sophisticated (and complicated) approaches like a Variational Auto-Encoder (VAE) or a Generative Adversarial Network (GAN) 
-might be able to learn more complex semantic mappings when compared to MLPs or CNNs. At the end of the day, selecting a 
-Transformer for this task strikes a balance between "ease of implementation" and "quality of output" - making it a great 
-choice for a baseline model and setting initial benchmark results.
 
