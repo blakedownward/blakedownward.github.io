@@ -9,15 +9,15 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Blake Downward
-description: "Welcome! I’m Blake, a Data Scientist based in Adelaide, Australia. I specialise in extracting insights and solutions from data to deliver real-world value. You'll find my work spans a range of disciplines, from digital signal processing and deep learning, to advanced data visualisations and analyses. Feel free to check out my work below and connect with me via GitHub or LinkedIn to get in touch."
+description: "Welcome! I’m Blake, a Data Scientist based in Adelaide, Australia. I specialise in extracting insights and solutions from data to deliver real-world value. You'll find my work spans a range of disciplines, from digital signal processing and deep learning, to advanced data visualisations and analyses. Feel free to check out my work below or get in touch with me via GitHub or LinkedIn."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
+subtitle: Data Science | Analytics <span style="color:#f58506"> Portfolio </span>
 location: "Adelaide, Australia"
-resume_url: /docs/Blake_Downward_CV_0225.pdf
+resume_url: /docs/Blake_Downward_CV_web_0225.pdf
 avatar_image: /img/Blake-Profile-Img.png
 
 #-------------------------------
@@ -25,19 +25,19 @@ avatar_image: /img/Blake-Profile-Img.png
 linkedln: "https://www.linkedin.com/in/blake-downward" # Add your linkedln handle
 github: "https://github.com/blakedownward"  # Add your github handle
 
-paginate: 6
+paginate: 10
 paginate_path: "/page/:num"
 
 sass:
   sass_dir: _sass
-  style: compressed # possible values: nested expanded compact compressed
+  style: compact # possible values: nested expanded compact compressed
 
 defaults:
   - scope:
       type: posts
     values:
       layout: post
-      read_time: true
+      read_time: false
       share: false
 
 
