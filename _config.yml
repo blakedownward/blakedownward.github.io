@@ -30,14 +30,14 @@ paginate_path: "/page/:num"
 
 sass:
   sass_dir: _sass
-  style: compact # possible values: nested expanded compact compressed
+  style: expanded # possible values: nested expanded compact compressed
 
 defaults:
   - scope:
       type: posts
     values:
       layout: post
-      read_time: false
+      read_time: true
       share: false
 
 
