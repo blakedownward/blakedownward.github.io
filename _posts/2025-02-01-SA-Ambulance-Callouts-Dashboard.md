@@ -1,12 +1,12 @@
 ---
 layout: post
 title: SA Ambulance Service Callouts Dashboard
-image: "/posts/saas-callouts-power-bi-dashboard.png"
+image: "/posts/saas-callouts-dashboard.png"
 tags: [Dashboard, Power BI, Data Visualisation, Data Mining, Data Modelling]
 ---
 
 ## Project Overview
-The **SA Ambulance Service Callouts Dashboard** is a Power BI visualisation tool that aggregates over **161,000+ pager messages** sent to the **South Australian Ambulance Service (SAAS)** over a **five-month period (August 1st, 2024 – January 31st, 2025)**. This dashboard integrates **geographic and population data** to offer a **state-wide overview of emergency callout patterns**, providing timely and localised insights that would not otherwise be available.
+The **SA Ambulance Service Callouts Dashboard** is a Power BI visualisation tool that aggregates approx **185,000 pager messages** sent to the **South Australian Ambulance Service (SAAS)** over a **five-month period (August 1st, 2024 – February 28th, 2025)**. This dashboard integrates **geographic and population data** to offer a **state-wide overview of emergency callout patterns**, providing timely and localised insights that would not otherwise be available.
 
 ---
 
