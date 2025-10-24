@@ -15,7 +15,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: Simple. Clean. <span style="color:#f58506"> Systems. </span>
+subtitle: Simple. Clean. <span style="color:#f58506"> Systems </span>
 location: "Adelaide, Australia"
 resume_url: /docs/Blake_Downward_CV_web_0225.pdf
 avatar_image: /img/Blake-Profile-Img.png
@@ -51,6 +51,7 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
 
