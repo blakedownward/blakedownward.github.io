@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Blake Downward
-description: "Welcome! I’m Blake, a Data Scientist based in Adelaide, Australia. I specialise in extracting insights and solutions from data to deliver real-world value. You'll find my work spans a range of disciplines, from digital signal processing and deep learning, to advanced data visualisations and analyses. Feel free to check out my work below or get in touch with me via GitHub or LinkedIn."
+description: "Welcome! I’m Blake - a developer from Adelaide who designs tools and systems that run themselves. Most of my projects live at the edge of data, automation, and design - building things that help small teams work smarter, faster, and with less noise. I like simple builds, clean code, and tools that quietly get the job done. Feel free to check out my work below or get in touch with me via GitHub or LinkedIn."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -51,4 +51,5 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
